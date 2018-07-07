@@ -5,14 +5,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    signingConfigs {
-        test {
-            keyAlias 'key0'
-            keyPassword 'Test1234'
-            storeFile file('/Users/admin/Desktop/Work/TestReleaseKeystore/TestKeystore.jks')
-            storePassword 'Test1234'
-        }
-    }
+
     compileSdkVersion 26
     defaultConfig {
         applicationId "sample.com.sample_app"
@@ -26,7 +19,6 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.test
         }
     }
 }
